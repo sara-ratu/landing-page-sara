@@ -132,7 +132,101 @@ h2{font-size:clamp(1.9rem,4.5vw,2.8rem);letter-spacing:-.02em;margin-bottom:12px
 .fab svg{width:32px;height:32px;fill:currentColor}
 .fab.off{opacity:0;pointer-events:none;transform:scale(.6)}
 @media (max-width:760px){.nav ul{gap:12px}.nav ul a{font-size:.8rem}.nav .in{padding:9px 14px}.gal img{height:240px}}
-.proj small a{color:inherit;text-decoration:underline;text-underline-offset:3px}a.thumb.pic{text-decoration:none}</style>
+.proj small a{color:inherit;text-decoration:underline;text-underline-offset:3px}a.thumb.pic{text-decoration:none}
+
+/* Visual polish */
+html{scroll-padding-top:100px}
+.wrap{max-width:1080px}
+.hero{
+  min-height:min(820px,100svh);
+  display:grid;
+  align-items:center;
+  padding:132px 0 88px;
+  background:
+    radial-gradient(ellipse at 12% 18%,color-mix(in srgb,var(--a) 12%,transparent),transparent 36%),
+    radial-gradient(ellipse at 88% 78%,color-mix(in srgb,var(--b) 11%,transparent),transparent 34%);
+}
+.hero .wrap{gap:64px}
+.hi{font-weight:700;letter-spacing:.04em}
+.sum{line-height:1.8}
+.btn{align-items:center;justify-content:center;min-height:52px}
+.btn-main{box-shadow:0 12px 30px color-mix(in srgb,var(--a) 28%,transparent)}
+.btn-main:hover{box-shadow:0 16px 36px color-mix(in srgb,var(--b) 35%,transparent)}
+.btn-line:hover{border-color:var(--a);background:color-mix(in srgb,var(--a) 8%,transparent)}
+.code{border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.24)}
+section{padding:96px 0}
+section[id]{scroll-margin-top:100px}
+h2{margin-bottom:18px}
+.lead{line-height:1.75}
+.about{gap:56px;align-items:start}
+.stats{gap:14px}
+.stats div{padding:18px 12px;transition:transform .2s,border-color .2s}
+.stats div:hover{transform:translateY(-3px);border-color:var(--a)}
+.timeline{gap:28px}
+.skills{grid-template-columns:repeat(auto-fit,minmax(min(100%,245px),1fr))}
+.sk{box-shadow:0 10px 30px rgba(0,0,0,.08)}
+.sk:hover{transform:translateY(-5px);rotate:0deg}
+.chips li{transition:border-color .2s,background .2s}
+.chips li:hover{border-color:var(--a);background:color-mix(in srgb,var(--a) 10%,var(--bg2))}
+.cards,.gal{gap:24px}
+.proj,.gal figure{box-shadow:0 14px 36px rgba(0,0,0,.08)}
+.proj:hover{transform:translateY(-5px)}
+.thumb.pic{height:210px}
+.body{padding:22px}
+.proj p{line-height:1.7}
+.gal img{height:340px}
+.contact{
+  background:
+    radial-gradient(ellipse at 50% 0,color-mix(in srgb,var(--b) 14%,transparent),transparent 58%),
+    var(--bg2);
+}
+.wa{box-shadow:0 12px 30px rgba(37,211,102,.2)}
+.wa:hover{box-shadow:0 16px 38px rgba(37,211,102,.32)}
+.soc a{min-width:120px}
+.nav .in{box-shadow:0 10px 30px rgba(0,0,0,.08)}
+.nav ul a{white-space:nowrap}
+.fab{width:56px;height:56px}
+
+@media (max-width:760px){
+  html{scroll-padding-top:88px}
+  .hero{min-height:auto;padding:116px 0 76px}
+  .hero .wrap{gap:36px}
+  .side{order:initial}
+  section{padding:72px 0}
+  section[id]{scroll-margin-top:88px}
+  .about{gap:34px}
+  .gal img{height:280px}
+}
+@media (max-width:560px){
+  .wrap{padding-inline:20px}
+  .hero{padding-top:108px}
+  .hero .wrap{gap:30px}
+  h1{font-size:clamp(2.65rem,13vw,4rem)}
+  .hi{font-size:1rem}
+  .sum{font-size:1rem}
+  .btns{display:grid;grid-template-columns:1fr}
+  .btn{width:100%}
+  .photo{width:184px;height:184px}
+  .photo>div{font-size:3rem}
+  .nav .in{justify-content:center}
+  .nav .logo{display:none}
+  .nav ul{width:100%;justify-content:space-between;gap:8px}
+  .nav ul a{font-size:.76rem}
+  .stats{gap:8px}
+  .stats div{padding:12px 6px}
+  .stats b{font-size:1.45rem}
+  .stats span{font-size:.72rem}
+  .skills,.cards,.gal{grid-template-columns:1fr}
+  .sk{padding:18px}
+  .sub{margin-top:40px}
+  .thumb.pic{height:190px}
+  .gal img{height:260px}
+  .contact{padding-top:80px}
+  .wa{gap:10px;padding:17px 22px}
+  .soc{gap:8px}
+  .soc a{min-width:0;padding:10px 16px}
+}
+</style>
 </head>
 <body>
 <div class="prog" id="prog"></div>
@@ -236,12 +330,12 @@ h2{font-size:clamp(1.9rem,4.5vw,2.8rem);letter-spacing:-.02em;margin-bottom:12px
 <div class="wrap">
 <h2>Punya ide? <span class="grad">Ayo wujudkan bersama.</span></h2>
 <p>Tertarik berkolaborasi pada proyek web, desain, atau kegiatan kampus? Kirim pesan sekarang dan saya balas secepatnya.</p>
-<a class="wa" href="https://wa.me/6281234567890?text=Halo%20Sara%2C%20saya%20melihat%20landing%20page%20Anda%20dan%20ingin%20berdiskusi." target="_blank" rel="noopener">
+<a class="wa" href="https://wa.me/6289524154733?text=Halo%20Sara%2C%20saya%20melihat%20landing%20page%20Anda%20dan%20ingin%20berdiskusi." target="_blank" rel="noopener">
 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.1-.2-1.2-1.6-1.2-3s.8-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.6-.1l2 .9c.3.1.5.2.5.3.1.2.1.8-.1 1.7Z"/></svg>
 Hubungi saya via WhatsApp
 </a>
 <div class="soc"><a href="https://www.linkedin.com/in/sara-ratu-f" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.instagram.com/_sar.dv" target="_blank" rel="noopener">Instagram</a><a href="https://github.com/sara-ratu" target="_blank" rel="noopener">GitHub</a></div>
-<p class="copy">© 2026 Sara Ratu Faradiva. Dibuat sebagai tugas individu.</p>
+<p class="copy">© 2026 Sara Ratu Faradiva</p>
 </div>
 </footer>
 
